@@ -100,7 +100,8 @@
 	nixpkgs.config.allowUnfree = true;
 
 	services.power-profiles-daemon.enable = true;
-
+  services.bluetooth.enable = true;
+  
 	# Enable experimental settings
 	nix.settings.experimental-features = [ "nix-command" "flakes" ];
 
@@ -118,10 +119,12 @@
 		kitty
 		lm_sensors
 		neovim
-		nix-search
+		nix-search-tv
+    luarocks
+    lua
 		speedtest-cli
 		kdePackages.dolphin
-		libgcc
+		gcc
 		tmux
 		vscode
 		unzip
