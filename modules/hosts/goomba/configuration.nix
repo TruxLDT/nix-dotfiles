@@ -90,6 +90,8 @@
 		};
 	};
 
+  home-manager.users.trux = self.homeModules.truxModule;
+
 	programs.niri.enable = true;
 
 	# Install firefox.

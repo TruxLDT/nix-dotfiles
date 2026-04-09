@@ -8,8 +8,6 @@
     ];
     
 	# Bootloader.
-	# boot.loader.grub.enable = true;
-	# boot.loader.limine.enable = true;
 	# boot.loader.efi.canTouchEfiVariables = true;
 
 	boot.loader.grub.enable = true;
@@ -17,11 +15,12 @@
   	boot.loader.grub.useOSProber = true;
 
 	# Use latest kernel.
-	# boot.kernelPackages = pkgs.linuxPackages_zen;
+	boot.kernelPackages = pkgs.linuxPackages_zen;
 
 	networking.hostName = "nixvm"; # Define your hostname.
 
 	services.openssh.enable = true;
+  
 	# Enable networking
 	networking.networkmanager.enable = true;
 
@@ -89,7 +88,12 @@
 		];
 	};
 
-	programs.fish.enable = true;
+	programs.fish = {
+		enable = true;
+		shellAbbrs = {
+			ll = "ls -la";
+		};
+
 	home-manager.users.trux = self.homeModules.truxModule;
 	
 	# Allow unfree packages
