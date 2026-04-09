@@ -1,2 +1,2 @@
-# nixos
-nixos conf
+# NixOS dotfiles
+^^^
