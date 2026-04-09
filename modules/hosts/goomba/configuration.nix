@@ -86,7 +86,6 @@
 		enable = true;
 		shellAbbrs = {
 			ll = "ls -la";
-			nrs = "nixos-rebuild switch --flake ~/myNixOS#.myMachine";
 		};
 	};
 
